@@ -9,5 +9,8 @@
 
   --background-color: #FFF;
   --accent-color: #000;
+
+  --background-image: repeating-linear-gradient(#d3d3d3, transparent 2px),
+    repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
+    linear-gradient(#e7e7e7 0.01% 100%, #1a1a1a);
 }
- 
