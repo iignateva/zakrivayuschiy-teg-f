@@ -84,7 +84,50 @@
   margin-inline-start: -15px;
   inline-size: 13px;
   block-size: 16px;
+  animation: pointer-moving 0.5s ease-in-out alternate infinite;
 }
+
+.theme-menu__button[disabled='true'] {
+  pointer-events: none;
+}
+
+.theme-menu__button[disabled='true'],
+.theme-menu__button:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin-top: -3px;
+  background-color: currentColor;
+  transition: width 0.3s;
+}
+
+.theme-menu__button:hover::after {
+  width: 100%;
+}
+
+@keyframes pointer-moving {
+
+  from {
+      margin-inline-start: -15px;
+  }
+
+  to {
+      margin-inline-start: -19px;
+  }
+}
+
+/*
+Для этого напишите кифрейм, в первом кадре которого будет описан текущий сдвиг псевдоэлемента,
+ а в финальном — сдвиг на 4 пикселя правее. После этого запустите анимацию на псевдоэлементе длительностью 0.5 
+секунды с функцией времени ease-in-out, сделайте её бесконечной и проигрывающейся в две стороны.
+
+*/
 
 .card {
   inline-size: clamp(23.4375rem, 0rem + 100% 43.75rem);
