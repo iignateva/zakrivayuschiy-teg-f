@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -12,11 +12,16 @@
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
     <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="./svg/favicon.svg"/>
+    <link rel="apple-touch-icon" href="./svg/favicon.svg" />
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
     <header class="header">
+      <div>
+        <p class="header-text header__tag">&lt;/HTML&gt;</p>
+        <p class="header-text header__subtitle">закрывающий тег</p>
+ 
+      </div>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -43,7 +48,49 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <div class="card">
+        <div class="card__title">
+          Фритрек и нулевой спринт: Подготовка к работе
+        </div>
+        <div class="card__image-container">
+        <span class="card__label">&lt;/HTML&gt;</span>
+        <img
+          class="card__image"
+          src="./images/tablet/car.png"
+          alt="Машина на фиолетовом фоне"
+        />
+        </div>
+        <div class="card__content">
+          <p>
+            Это было самое начало пути. На этом этапе важно было проникнуться
+            основами и настроиться на учёбу. И, возможно, подумать, как новые
+            знания могут повлиять на ваше будущее.
+          </p>
+          <p>Место для ваших воспоминаний о начале обучения.</p>
+        </div>
+        <div class="like-buttons">
+          <button class="button card__icon-button">
+            <img
+              class="like-icon is-liked"
+              src="./svg/heart.svg"
+              alt="сердечко"
+            />
+          </button>
+          <button class="button card__like-button">
+            <span class="button__text">Like</span>
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <button class="button save-button">
+        <svg class="save-button__image" viewBox="0 0 39 39">
+          <use href="./svg/floppy.svg#floppy-disk"></use>
+        </svg>
+          <span class="button__text save-button__text">Сохранить на память</span>
+      </button>
+    </footer>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

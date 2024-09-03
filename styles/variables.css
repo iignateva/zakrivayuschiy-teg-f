@@ -8,7 +8,7 @@
   --main-font-weight-content: 400;
 
   --background-color: #FFF;
-  --accent-color: #000;
+  --main-color: #000;
 
   --background-image: repeating-linear-gradient(#d3d3d3, transparent 2px),
     repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
