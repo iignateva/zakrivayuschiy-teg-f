@@ -122,13 +122,6 @@
   }
 }
 
-/*
-Для этого напишите кифрейм, в первом кадре которого будет описан текущий сдвиг псевдоэлемента,
- а в финальном — сдвиг на 4 пикселя правее. После этого запустите анимацию на псевдоэлементе длительностью 0.5 
-секунды с функцией времени ease-in-out, сделайте её бесконечной и проигрывающейся в две стороны.
-
-*/
-
 .card {
   inline-size: clamp(23.4375rem, 0rem + 100% 43.75rem);
   border: 2px solid var(--main-color, #000);
@@ -160,7 +153,6 @@
   text-shadow: 0 0 2px var(--background-color, #fff);
 }
 
-
 .card__image {
   inline-size: 100%;
   border-block: 2px solid var(--main-color, #000);
@@ -178,27 +170,66 @@
   justify-content: end;
   margin-inline-end: 25px;
   margin-block-end: 25px;
+  gap: 5px;
 }
 
 .button {
+  outline: transparent;
+  overflow: hidden;
+  position: relative;
   background-color: transparent;
   border: 2px solid var(--main-color, #000);
 }
-
-.card__icon-button {
-  border: none;
+ 
+.focus-shadow:focus,
+.focus-shadow:focus-visible {
+  box-shadow: 2px 2px 0 currentColor;
+  transition: box-shadow 0.3s;
 }
 
-.card__like-button {
+.card__icon-button {
+  border: 2px solid transparent;
+}
+
+.card__icon-button:focus,
+.card__icon-button:focus-visible {
+  border: 2px solid currentColor;
+  transition: border 0.3s ease;
+}
+
+.overlapped::before { 
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: var(--main-color, #000);
+  width: 100%; 
+  transform: translate(-100%);
+  display: block;
+  transition: transform 0.5s ease-in-out;
+
+}
+
+.overlapped:hover::before {
+   transform: translate(0);
+}
+
+.overlapped span {
+  position: relative;
+  z-index: 1;
 }
 
 .button__text {
-  color: currentColor;
   font-family: var(--accent-font, arial, sans-serif);
   line-height: 90%;
   font-size: 14px;
   text-align: center;
   padding: 12px 37px;
+}
+
+.mixed {
+  mix-blend-mode: difference;
+  color: var(--inversed-color, #fff);
 }
 
 .footer {
