@@ -13,6 +13,8 @@
     repeating-linear-gradient(90deg, #000, transparent 2px),
     linear-gradient(#007f0c, #004306);
   --main-font-weight-title: 785;
+  --like-icon-contour-color: #00cc14;
+  --like-icon-fill-color: #F00;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +27,8 @@
       repeating-linear-gradient(90deg, #000, transparent 2px),
       linear-gradient(#007f0c, #004306);
     --main-font-weight-title: 785;
+    --like-icon-contour-color: #00cc14;
+    --like-icon-fill-color: #F00;
   }
 }
 
@@ -35,4 +39,6 @@
   --background-image: repeating-linear-gradient(#d3d3d3, transparent 2px),
     repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
     linear-gradient(#e7e7e7 0.01% 100%, #1a1a1a);
+  --like-icon-contour-color: #000;
+  --like-icon-fill-color: #F00;
 }

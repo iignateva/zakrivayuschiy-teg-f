@@ -257,6 +257,31 @@
   height: 21px;
 }
 
+.like-icon {
+  block-size: 36px;
+  inline-size: 39px;
+}
+
+.like-icon-heart {
+
+}
+
+.like-icon__contour {
+
+}
+
+.like-icon__main-body {
+
+}
+
+.like-icon__core {
+
+}
+
+.like-icon__sparks {
+  opacity: 0;
+}
+
 @media (width <= 375px) {
 
   .card {
