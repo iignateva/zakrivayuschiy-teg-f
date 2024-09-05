@@ -6,7 +6,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -207,7 +206,6 @@
   transform: translate(-100%);
   display: block;
   transition: transform 0.5s ease-in-out;
-
 }
 
 .overlapped:hover::before {
@@ -262,21 +260,33 @@
   inline-size: 39px;
 }
 
-.like-icon-heart {
+.like-icon__core {
+   transition: fill 0.3s 0.03s linear;
+}
 
+ .like-icon__main-body {
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .like-icon__core {
+  fill: var(--like-icon-contour-color, #000); 
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .like-icon__main-body {
+  fill: var(--like-icon-contour-color, #000); 
+  transition: fill 0.3s 0.05s linear;
+}
+
+/*
+.like-icon-heart {
+  
 }
 
 .like-icon__contour {
-
+ 
 }
-
-.like-icon__main-body {
-
-}
-
-.like-icon__core {
-
-}
+*/
 
 .like-icon__sparks {
   opacity: 0;
