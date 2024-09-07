@@ -189,7 +189,6 @@
   border: 2px solid transparent;
 }
 
-.card__icon-button:focus,
 .card__icon-button:focus-visible {
   border: 2px solid currentColor;
   transition: border 0.3s ease;
@@ -250,13 +249,13 @@
 }
 
 .save-button__image {
-  width: 21px;
-  height: 21px;
+  min-inline-size: 21px;
+  min-block-size: 21px;
 }
 
 .like-icon {
-  block-size: 36px;
-  inline-size: 39px;
+  min-block-size: 36px;
+  min-inline-size: 39px;
 }
 
 .like-icon__core {
@@ -298,27 +297,17 @@
   transition: fill 0.3s 0.06s linear;
 }
 
-.like-icon-heart {
-}
-
 .like-icon.is-liked .like-icon-heart {
+  transform-origin: center;
   animation: scaling 0.3s ease-in 0.1s 1 none;
 }
 
 .like-icon.is-liked .like-icon__sparks {
   animation: sparks 0.3s ease-in 0.3s 1 none;
 }
-/*
-.like-icon-heart {
-  
-}
-
-.like-icon__contour {
- 
-}
-*/
 
 @keyframes scaling {
+
   0% {
     transform: scale(1);
   }
@@ -333,6 +322,7 @@
 }
 
 @keyframes sparks {
+  
   0% {
     opacity: 0;
   }
