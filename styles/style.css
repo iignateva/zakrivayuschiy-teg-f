@@ -110,17 +110,6 @@
   width: 100%;
 }
 
-@keyframes pointer-moving {
-
-  from {
-    margin-inline-start: -15px;
-  }
-
-  to {
-    margin-inline-start: -19px;
-  }
-}
-
 .card {
   inline-size: clamp(23.4375rem, 0rem + 100% 43.75rem);
   border: 2px solid var(--main-color, #000);
@@ -139,6 +128,7 @@
 
 .card__label {
   position: absolute;
+  z-index: 1;
   right: 25px;
   top: 25px;
   font-family: var(--accent-font, arial, sans-serif);
@@ -150,6 +140,15 @@
   opacity: 0.5;
   text-shadow: 0 0 2px var(--background-color, #FFF);
 }
+
+@supports((text-stroke: 1px #FFF) or (-webkit-text-stroke: 1px #FFF)) {
+
+    .card__label {
+        -webkit-text-stroke: 1px var(--background-color, #FFF);
+        text-stroke: 1px var(--background-color, #FFF);
+        text-shadow: none;
+    }
+} 
 
 .card__image {
   inline-size: 100%;
@@ -307,36 +306,6 @@
   animation: sparks 0.3s ease-in 0.3s 1 none;
 }
 
-@keyframes scaling {
-
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.5);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes sparks {
-  
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
 @media (width <= 375px) {
 
   .save-button {
@@ -406,13 +375,6 @@
   animation: animated-hue-rotate 3s linear infinite;
 }
 
-@keyframes animated-hue-rotate {
-
-  100% {
-     filter: hue-rotate(var(--filter-hue-rotate, 180deg));
-  }
-}
-
 .image-perfection {
    filter: saturate(200%);
 }
@@ -433,11 +395,4 @@
 
 .image-now {
   filter: contrast(120%)  drop-shadow(5px 15px 3px rgba(249, 171, 235, 0.5));
-}
-
-@keyframes animated-invert {
-
-  100% {
-     filter: invert(0);
-  }
 }
