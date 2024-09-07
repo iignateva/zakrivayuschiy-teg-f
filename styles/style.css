@@ -20,7 +20,7 @@
   font-variation-settings: 'wght' var(--main-font-weight-content, 400);
   background-color: var(--background-color, #FFF);
   color: var(--main-color, #000);
-  background-image: var(--background-image, #000);
+  background-image: var(--background-image);
   background-size: cover;
   max-inline-size: 700px;
   margin-inline: auto;
@@ -111,7 +111,7 @@
 }
 
 .card {
-  inline-size: clamp(23.4375rem, 0rem + 100% 43.75rem);
+  inline-size: clamp(23.4375rem, 0rem + 100%, 43.75rem);
   border: 2px solid var(--main-color, #000);
   margin-block-end: 50px;
   background-color: var(--background-color, #FFF);
