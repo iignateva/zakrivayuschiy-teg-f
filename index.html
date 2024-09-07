@@ -108,7 +108,25 @@
       </div>
     </main>
     <footer class="footer">
-      <button class="button focus-shadow save-button overlapped">
+      <dialog id="save-dialog-id" class="save-dialog">
+        <div class="save-dialog__context">
+          <svg class="save-dialog__image" viewBox="0 0 39 39">
+            <use href="./svg/floppy.svg#floppy-disk"></use>
+          </svg>
+          <p class="save-dialog__text">Вставьте дискету, чтобы продолжить</p>
+        </div>
+        <button
+          class="button save-dialog__text save-dialog__button-ok"
+          onclick="window['save-dialog-id'].close()"
+        >
+          ok
+        </button>
+      </dialog>
+      <button
+        class="button focus-shadow save-button overlapped"
+        onclick="window['save-dialog-id'].showModal()"
+        aria-controls="dialog-id"
+      >
         <svg class="save-button__image mixed" viewBox="0 0 39 39">
           <use href="./svg/floppy.svg#floppy-disk"></use>
         </svg>

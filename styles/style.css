@@ -111,13 +111,12 @@
 }
 
 @keyframes pointer-moving {
-
   from {
-      margin-inline-start: -15px;
+    margin-inline-start: -15px;
   }
 
   to {
-      margin-inline-start: -19px;
+    margin-inline-start: -19px;
   }
 }
 
@@ -179,7 +178,7 @@
   background-color: transparent;
   border: 2px solid var(--main-color, #000);
 }
- 
+
 .focus-shadow:focus,
 .focus-shadow:focus-visible {
   box-shadow: 2px 2px 0 currentColor;
@@ -196,20 +195,20 @@
   transition: border 0.3s ease;
 }
 
-.overlapped::before { 
+.overlapped::before {
   content: '';
   position: absolute;
   top: 0;
   height: 100%;
   background-color: var(--main-color, #000);
-  width: 100%; 
+  width: 100%;
   transform: translate(-100%);
   display: block;
   transition: transform 0.5s ease-in-out;
 }
 
 .overlapped:hover::before {
-   transform: translate(0);
+  transform: translate(0);
 }
 
 .overlapped span {
@@ -261,10 +260,10 @@
 }
 
 .like-icon__core {
-   transition: fill 0.3s 0.03s linear;
+  transition: fill 0.3s 0.03s linear;
 }
 
- .like-icon__main-body {
+.like-icon__main-body {
   transition: fill 0.3s linear;
 }
 
@@ -274,15 +273,15 @@
 
 .like-icon:hover .like-icon__core,
 .like-icon:hover .like-icon__main-body {
-  fill: var(--like-icon-contour-color, #000); 
+  fill: var(--like-icon-contour-color, #000);
 }
 
 .like-icon.is-liked .like-icon__core,
 .like-icon.is-liked .like-icon__main-body,
 .like-icon.is-liked .like-icon__contour,
 .like-icon:active .like-icon__core,
-.like-icon:active .like-icon__main-body{
-  fill: var(--like-icon-fill-color, #F00); 
+.like-icon:active .like-icon__main-body {
+  fill: var(--like-icon-fill-color, #f00);
 }
 
 .like-icon:active .like-icon__core,
@@ -300,7 +299,6 @@
 }
 
 .like-icon-heart {
-
 }
 
 .like-icon.is-liked .like-icon-heart {
@@ -320,15 +318,13 @@
 }
 */
 
-
 @keyframes scaling {
-
   0% {
     transform: scale(1);
   }
 
   50% {
-     transform: scale(1.5);
+    transform: scale(1.5);
   }
 
   100% {
@@ -337,13 +333,12 @@
 }
 
 @keyframes sparks {
-
   0% {
     opacity: 0;
   }
 
   50% {
-     opacity: 1;
+    opacity: 1;
   }
 
   100% {
@@ -362,3 +357,46 @@
     height: 28px;
   }
 }
+
+.save-dialog {
+  max-inline-size: 357px;
+  max-block-size: 193px;
+}
+
+.save-dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+} 
+
+.save-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.save-dialog__context {
+  display: grid;
+  grid-template-columns: 20% 70%;
+}
+
+.save-dialog__image {
+  block-size: 39px;
+  inline-size: 39px;
+  align-self: center;
+}
+
+.save-dialog__text {
+  font-family: var(--accent-font, sans-serif);
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: var(--main-color, #000);
+}
+
+.save-dialog__button-ok {
+  inline-size: 100%;
+  padding-block: 12px;
+}
+
+/*
+
+*/
