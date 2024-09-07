@@ -397,6 +397,51 @@
   padding-block: 12px;
 }
 
-/*
+.image-begin {
+  filter: opacity(50%);
+}
 
-*/
+.image-clean {
+  filter: brightness(300%) sepia(10%);
+}
+
+.image-inspired {
+  filter: hue-rotate(-180deg);
+  animation: animated-hue-rotate 3s linear infinite;
+}
+
+@keyframes animated-hue-rotate {
+
+  100% {
+     filter: hue-rotate(var(--filter-hue-rotate, 180deg));
+  }
+}
+
+.image-perfection {
+   filter: saturate(200%);
+}
+
+.image-coworkers {
+  filter: blur(1px);
+}
+
+.image-rage {
+  --filter-hue-rotate: -40deg;
+  animation: animated-hue-rotate 0.5s linear infinite;
+}
+
+.image-okay {
+  filter: invert(0.6); 
+  animation: animated-invert 10s cubic-bezier(0, 0.34, 0.42, 1.01) infinite forwards;
+}
+
+.image-now {
+  filter: contrast(120%)  drop-shadow(5px 15px 3px rgba(249, 171, 235, 0.5));
+}
+
+@keyframes animated-invert {
+
+  100% {
+     filter: invert(0);
+  }
+}
