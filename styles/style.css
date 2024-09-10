@@ -54,18 +54,22 @@
 .header__subtitle {
   font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
   line-height: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
-  margin-block-end: 25px;
+  margin-block-end: 19px;
 }
 
 .header__theme-menu {
-  margin-block-end: 25px;
+  margin-block-end: 23px;
 }
 
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 6px;
   justify-content: flex-start;
+}
+
+.theme-menu__item {
+  padding-inline-start: 20px;
 }
 
 .theme-menu__button {
@@ -119,7 +123,10 @@
 
 .card__title {
   font-variation-settings: 'wght' var(--main-font-weight-title, 700);
-  padding: 3px 10px;
+  padding: 5px 10px 3px;;
+  font-size: 18px;
+  line-height: 22px;
+  border-block-end: 2px solid var(--main-color, #000);
 }
 
 .card__image-container {
@@ -129,12 +136,11 @@
 .card__label {
   position: absolute;
   z-index: 1;
-  right: 25px;
+  right: 11px;
   top: 25px;
   font-family: var(--accent-font, arial, sans-serif);
   font-size: 14px;
   line-height: 14px;
-  text-transform: uppercase;
   color: currentColor;
   mix-blend-mode: hard-light;
   opacity: 0.5;
@@ -152,7 +158,11 @@
 
 .card__image {
   inline-size: 100%;
-  border-block: 2px solid var(--main-color, #000);
+  vertical-align: middle;
+  inline-size: 100%;
+  block-size: 371px;
+  object-position: center;
+  object-fit: cover;
 }
 
 .card__content {
@@ -160,13 +170,16 @@
   flex-direction: column;
   gap: 27px;
   padding: 25px;
+  border-block-start: 2px solid var(--main-color, #000);
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .like-buttons {
   display: flex;
   justify-content: end;
   margin-inline-end: 25px;
-  margin-block-end: 25px;
+  margin-block-end: 19px;
   gap: 5px;
 }
 
@@ -184,6 +197,8 @@
 }
 
 .card__icon-button {
+  min-inline-size: 36px;
+  min-block-size: 39px;
   border: 2px solid transparent;
 }
 
@@ -213,12 +228,16 @@
   z-index: 1;
 }
 
+.card__like-button {
+  inline-size: 130px;
+  block-size: 38px;
+}
+
 .button__text {
   font-family: var(--accent-font, arial, sans-serif);
   line-height: 90%;
   font-size: 14px;
   text-align: center;
-  padding: 12px 37px;
 }
 
 .mixed {
