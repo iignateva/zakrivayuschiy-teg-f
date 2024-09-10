@@ -9,39 +9,72 @@
   --background-color: #000;
   --inversed-color: #00cc14;
   --main-color: #00cc14;
-  --background-image: repeating-linear-gradient(#000, transparent 2px),
-    repeating-linear-gradient(90deg, #000, transparent 2px),
-    linear-gradient(#007f0c, #004306);
+  --background-image: repeating-linear-gradient(
+      #000,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #000,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(#007f0c 0.01%, #004306 100%);
   --main-font-weight-title: 785;
   --like-icon-contour-color: #00cc14;
-  --like-icon-fill-color: #F00;
+  --like-icon-fill-color: #f00;
   --main-font-weight-content: 465;
 }
 
 @media (prefers-color-scheme: dark) {
-
+  
   :root {
     --background-color: #000;
     --inversed-color: #00cc14;
     --main-color: #00cc14;
-    --background-image: repeating-linear-gradient(#000, transparent 2px),
-      repeating-linear-gradient(90deg, #000, transparent 2px),
-      linear-gradient(#007f0c, #004306);
+    --background-image: repeating-linear-gradient(
+        #000,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        #000,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(#007f0c 0.01%, #004306 100%);
     --main-font-weight-title: 785;
     --like-icon-contour-color: #00cc14;
-    --like-icon-fill-color: #F00;
+    --like-icon-fill-color: #f00;
     --main-font-weight-content: 465;
   }
 }
 
 :root.theme-light {
   --background-color: #fff;
-  --inversed-color:  #fff;
+  --inversed-color: #fff;
   --main-color: #000;
-  --background-image: repeating-linear-gradient(#d3d3d3, transparent 2px),
-    repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
-    linear-gradient(#e7e7e7 0.01% 100%, #1a1a1a);
+  --background-image: repeating-linear-gradient(
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
   --like-icon-contour-color: #000;
-  --like-icon-fill-color: #F00;
+  --like-icon-fill-color: #f00;
   --main-font-weight-content: 400;
 }
