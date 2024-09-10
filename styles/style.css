@@ -132,7 +132,7 @@
 
 .card__title {
   font-variation-settings: 'wght' var(--main-font-weight-title, 700);
-  padding: 5px 10px 3px;;
+  padding: 5px 10px 3px;
   font-size: 18px;
   line-height: 22px;
   border-block-end: 2px solid var(--main-color, #000);
@@ -406,7 +406,7 @@ button:focus {
 }
 
 .filter-animated-invert {
-  filter: invert(0.6); 
+  filter: invert(0.6);
   animation: animated-invert 10s cubic-bezier(0, 0.34, 0.42, 1.01) infinite forwards;
 }
 
